@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link to="/" className="link">
-            <span className="text">Giverr</span>
+            <span className="text">TaskGenius</span>
           </Link>
           <span className="dot">.</span>
         </div>
@@ -52,7 +52,10 @@ const Navbar = () => {
                 setOpen(!open);
               }}
             >
-              <img src="" alt="" />
+              <img
+                src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
               <span>{currentUser.username}</span>
               {open && (
                 <div className="options">
