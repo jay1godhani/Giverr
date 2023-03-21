@@ -1,8 +1,9 @@
 // console.log("test");
 
-const express = require("express");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import userRoute from "./routes/user_route.js";
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,8 @@ const connect = async () => {
     console.error(error);
   }
 };
+
+app.use("/api/user", userRoute); // using user router on /api/user path
 
 app.listen(8000, () => {
   connect();
