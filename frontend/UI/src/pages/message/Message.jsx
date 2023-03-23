@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "./Message.scss";
 import { Link } from "react-router-dom";
 
@@ -59,6 +60,11 @@ const Message = () => {
     </div>
 
   </div>);
+=======
+
+const Message = () => {
+  return <div className="message">Message</div>;
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
 };
 
 export default Message;

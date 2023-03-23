@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "./MyGigs.scss";
 import { Link } from "react-router-dom";
 
@@ -36,6 +37,11 @@ const MyGigs = () => {
     </div>
   </div>
   );
+=======
+
+const MyGigs = () => {
+  return <div className="mygigs">MyGigs</div>;
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
 };
 
 export default MyGigs;

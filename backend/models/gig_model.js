@@ -39,10 +39,13 @@ const GigSchema = new Schema(
       type: [String],
       required: false,
     },
+<<<<<<< HEAD
     userId: {
       type: String,
       required: true,
     },
+=======
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
     shortTitle: {
       type: String,
       required: true,

@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "./Orders.scss";
 import { Link } from "react-router-dom";
 
@@ -43,3 +44,11 @@ const Orders = () => {
 
 export default Orders;
 
+=======
+
+const Orders = () => {
+  return <div className="orders">Orders</div>;
+};
+
+export default Orders;
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb

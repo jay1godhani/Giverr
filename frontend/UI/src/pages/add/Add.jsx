@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "./Add.scss";
 
 const Add = () => {
@@ -47,6 +48,11 @@ const Add = () => {
     </div>
 
   </div>);
+=======
+
+const Add = () => {
+  return <div className="add">Add</div>;
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
 };
 
 export default Add;
