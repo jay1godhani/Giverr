@@ -116,10 +116,6 @@ const Navbar = () => {
               Lifestyle
             </Link>
           </div>
-<<<<<<< HEAD
-          <hr/>
-=======
->>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
         </>
       )}
     </div>
