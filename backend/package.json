@@ -2,7 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
+=======
   "type": "module",
+>>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
