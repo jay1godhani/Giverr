@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import "./Message.scss";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,7 @@ const Message = () => {
   return (<div className="message">
     <div className="container">
       <span className="breadcrumbs">
-        <Link to="/messages">Messages</Link> >  JOHN DOE >
+        <Link to="/messages">Messages</Link>   JOHN DOE 
       </span>
       <div className="message">
         <div className="item">
@@ -60,11 +59,6 @@ const Message = () => {
     </div>
 
   </div>);
-=======
-
-const Message = () => {
-  return <div className="message">Message</div>;
->>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
 };
 
 export default Message;

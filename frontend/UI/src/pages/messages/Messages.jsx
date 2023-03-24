@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import "./Messages.scss";
 import { Link } from "react-router-dom";
 
@@ -77,11 +76,3 @@ const Messages = () => {
 export default Messages;
 
 
-=======
-
-const Messages = () => {
-  return <div className="messages">Messages</div>;
-};
-
-export default Messages;
->>>>>>> 6ee63e9f372ae97c083fe4c2fb8522e89f8e20bb
