@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./MyGigs.scss";
 import { Link } from "react-router-dom";
 
@@ -36,6 +37,7 @@ const MyGigs = () => {
     </div>
   </div>
   );
+
 };
 
 export default MyGigs;

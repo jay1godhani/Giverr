@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Add.scss";
 
 const Add = () => {
@@ -47,6 +48,9 @@ const Add = () => {
     </div>
 
   </div>);
+
+
+
 };
 
 export default Add;

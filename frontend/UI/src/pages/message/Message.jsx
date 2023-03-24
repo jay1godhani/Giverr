@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Message.scss";
 import { Link } from "react-router-dom";
 
@@ -59,6 +60,9 @@ const Message = () => {
     </div>
 
   </div>);
+=======
+
+
 };
 
 export default Message;
