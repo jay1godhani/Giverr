@@ -1,9 +1,10 @@
 import express from "express";
+import { deleteUser } from "../controllers/user_controller.js";
+import { verifyToken } from "../middleware/token_verification.js";
 
 const userRoute = express.Router();
 
-userRoute.get("/test", (req, res) => {
-  res.send("hello sashank how are you");
-});
+// here verifyToken is middleware
+userRoute.delete("/:id", verifyToken, deleteUser);
 
 export default userRoute;
