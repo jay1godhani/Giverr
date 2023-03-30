@@ -11,7 +11,6 @@ function Register() {
   const [file, setFile] = useState(null);
   const [user, setUser] = useState({
     username: "",
-    email: "",
     password: "",
     img: "",
     country: "",
