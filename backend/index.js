@@ -30,6 +30,9 @@ app.use(cookieParser());
 
 app.use("/api/users", userRoute); // using user router on /api/user path
 app.use("/api/auth", authRoute);
+app.use("/api/gigs",gigRoute);
+app.use("/api/reviews", reviewRoute);
+
 
 // last middleware
 app.use((err, req, res, next) => {

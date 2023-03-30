@@ -24,3 +24,22 @@ export const deleteUser = async (req, res, next) => {
     next(err);
   }
 };
+
+
+export const getUser = async (req, res, next) => {
+  try {
+     console.log(req);
+
+    // getting user which has to be deleted
+    const user = await User.findById(req.params.id);
+
+   
+
+    res.status(200).send(user);
+
+    
+  } catch (err) {
+    // res.send(500).send("something went wrong");
+    next(err);
+  }
+};
