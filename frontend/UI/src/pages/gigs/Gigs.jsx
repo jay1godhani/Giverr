@@ -1,4 +1,4 @@
-import React, { useState,useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import newRequest from "../../../utils/newRequest";
 import GigCard from "../../components/gigCard/gigCard";
 import { useQuery } from "@tanstack/react-query";
@@ -8,35 +8,31 @@ import { useLocation } from "react-router-dom";
 const Gigs = () => {
   const [rightMenuActive, setRightMenuActive] = useState(false);
   const [sort, setSort] = useState("sales");
-  const minRef=useRef();
-  const maxRef=useRef();
+  const minRef = useRef();
+  const maxRef = useRef();
 
-  const {search}=useLocation();
+  const { search } = useLocation();
   // console.log(location);
 
-  const { isLoading, error, data,refetch } = useQuery({
+  const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
     queryFn: () =>
-    newRequest
-      .get(
-        `gigs${search}`
-      )
-      .then((res) => {
+      newRequest.get(`gigs${search}`).then((res) => {
         return res.data;
       }),
-  })
-// console.log("gigs",data);
-// console.log("error",error)
-  useEffect(()=>{
+  });
+  // console.log("gigs",data);
+  // console.log("error",error)
+  useEffect(() => {
     refetch();
-  },[sort])
+  }, [sort]);
 
-  const apply=()=>{
+  const apply = () => {
     // console.log(minRef.current.value);
     // console.log(maxRef.current.value);
     refetch();
-  }
-  console.log(data);
+  };
+  // console.log(data);
   const reSort = (type) => {
     setSort(type);
     setRightMenuActive(false);
@@ -48,7 +44,8 @@ const Gigs = () => {
         <span className="breadcrumbs">TaskGenius {">"} Graphics & Design </span>
         <h1>AI Artists</h1>
         <p>
-          Explore the boundaries of art and technology with Fiverr's AI artists
+          Explore the boundaries of art and technology with TaskGenius AI
+          artists
         </p>
         <div className="menu">
           <div className="left">
@@ -91,9 +88,11 @@ const Gigs = () => {
         </div>
 
         <div className="cards">
-          { isLoading ? "loading" : error ? "something went wrong!" : data.map((item) => (
-            <GigCard key={item._id} item={item} />
-          ))}
+          {isLoading
+            ? "loading"
+            : error
+            ? "something went wrong!"
+            : data.map((item) => <GigCard key={item._id} item={item} />)}
         </div>
       </div>
     </div>

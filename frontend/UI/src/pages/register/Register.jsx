@@ -38,7 +38,7 @@ function Register() {
     // console.log(user);
     const url = await upload(file);
 
-    console.log(url);
+    // console.log(url);
     try {
       await newRequest.post("auth/register", {
         ...user,
@@ -49,6 +49,7 @@ function Register() {
       console.log(err);
     }
   };
+
   return (
     <div className="register">
       <form onSubmit={handleSubmit}>

@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
 
   // if scrolling is there then making acitve = true
   const isActive = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  console.log(active);
+  // console.log(active);
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
@@ -52,7 +52,9 @@ const Navbar = () => {
           <span>Giverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <Link to="/login" className="link">SignIN</Link>
+          <Link to="/login" className="link">
+            SignIN
+          </Link>
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {currentUser && (

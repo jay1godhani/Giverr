@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/footer/Footer";
@@ -17,10 +17,11 @@ import {
   QueryClient,
   QueryClientProvider,
   useQuery,
-} from '@tanstack/react-query'
+} from "@tanstack/react-query";
+import Pay from "./pages/pay/Pay";
+import Success from "./pages/success/Success";
 
 function App() {
-
   const queryClient = new QueryClient();
   const Layout = () => {
     return (
@@ -30,7 +31,6 @@ function App() {
           <Outlet />
           <Footer />
         </QueryClientProvider>
-
       </div>
     );
   };
@@ -79,6 +79,14 @@ function App() {
         {
           path: "/add",
           element: <Add />,
+        },
+        {
+          path: "/pay/:id",
+          element: <Pay />,
+        },
+        {
+          path: "/success",
+          element: <Success />,
         },
       ],
     },

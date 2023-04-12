@@ -1,5 +1,4 @@
 import mongoose, { Schema } from "mongoose";
-import { Schema } from "mongoose";
 
 const messageSchema = new Schema(
   {
@@ -14,6 +13,9 @@ const messageSchema = new Schema(
     desc: {
       type: String,
       required: true,
+    },
+    pic: {
+      type: String,
     },
   },
   {

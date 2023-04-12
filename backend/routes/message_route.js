@@ -1,9 +1,12 @@
 import express from "express";
-
+import { verifyToken } from "../middleware/token_verification.js";
+import {
+  createMessage,
+  getAllMessages,
+} from "../controllers/message_controller.js";
 const messageRoute = express.Router();
 
-messageRoute.get("/test", (req, res) => {
-  res.send("hello sashank how are you");
-});
+messageRoute.post("/", verifyToken, createMessage);
+messageRoute.get("/:id", verifyToken, getAllMessages);
 
 export default messageRoute;
