@@ -17,7 +17,7 @@ const Gigs = () => {
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
     queryFn: () =>
-      newRequest.get(`gigs${search}`).then((res) => {
+      newRequest.get(`gigs?${search}`).then((res) => {
         return res.data;
       }),
   });
