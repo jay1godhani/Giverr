@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Featured.scss";
 
 const Featued = () => {
+  const [input,setInput]=useState("");
+  const navigate=useNavigate();
+  const handleSubmit=()=>{
+    navigate(`gigs?search=${input}`)
+  }
   return (
     <div className="featured">
       <div className="container">
@@ -16,9 +22,9 @@ const Featued = () => {
                 alt="hey
               "
               />
-              <input type="text" placeholder="Try Building mobile app" />
+              <input type="text" placeholder="Try Building mobile app" onChange={(e)=>setInput(e.target.value)}/>
             </div>
-            <button>Search</button>
+            <button onClick={handleSubmit}>Search</button>
           </div>
           <div className="popular">
             <span>Popular</span>
