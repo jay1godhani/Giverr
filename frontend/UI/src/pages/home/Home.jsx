@@ -9,6 +9,8 @@ import Fade from "react-reveal/Fade";
 import ProjectCard from "../../components/projectCard/ProjectCard";
 
 const Home = () => {
+
+ console.log("projects",projects);
   return (
     <div className="home">
       <Featued />

@@ -8,8 +8,10 @@ import { useLocation } from "react-router-dom";
 const Gigs = () => {
   const [rightMenuActive, setRightMenuActive] = useState(false);
   const [sort, setSort] = useState("sales");
-  const minRef = useRef();
-  const maxRef = useRef();
+  // const minRef = useRef();
+  // const maxRef = useRef();
+  const [minRef,setMinRef]=useState(0);
+  const [maxRef,setMaxRef]=useState(20000);
 
   const { search } = useLocation();
   // console.log(location);
@@ -17,7 +19,7 @@ const Gigs = () => {
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
     queryFn: () =>
-      newRequest.get(`gigs?${search}`).then((res) => {
+      newRequest.get(`gigs?${search}&min=${minRef}&max=${maxRef}&sort=${sort}`).then((res) => {
         return res.data;
       }),
   });
@@ -28,8 +30,7 @@ const Gigs = () => {
   }, [sort]);
 
   const apply = () => {
-    // console.log(minRef.current.value);
-    // console.log(maxRef.current.value);
+ 
     refetch();
   };
   // console.log(data);
@@ -50,8 +51,8 @@ const Gigs = () => {
         <div className="menu">
           <div className="left">
             <span>Budget</span>
-            <input type="text" placeholder="min" />
-            <input type="text" placeholder="max" />
+            <input type="text" placeholder="min" onChange={(e)=>setMinRef(e.target.value)} />
+            <input type="text" placeholder="max" onChange={(e)=>setMaxRef(e.target.value)}/>
             <button onClick={apply}>Apply</button>
           </div>
           <div className="right">

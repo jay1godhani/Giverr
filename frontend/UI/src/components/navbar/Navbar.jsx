@@ -52,11 +52,11 @@ const Navbar = () => {
           <span>Giverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <Link to="/login" className="link">
+         {!currentUser && <Link to="/login" className="link">
             SignIN
-          </Link>
+          </Link>}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button>Join</button>}
+          {!currentUser && <button><Link className="link" to="/register">Register</Link></button>}
           {currentUser && (
             <div
               className="user"
