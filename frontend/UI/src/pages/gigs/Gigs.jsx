@@ -3,7 +3,7 @@ import newRequest from "../../../utils/newRequest";
 import GigCard from "../../components/gigCard/gigCard";
 import { useQuery } from "@tanstack/react-query";
 import "./Gigs.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation,useParams } from "react-router-dom";
 
 const Gigs = () => {
   const [rightMenuActive, setRightMenuActive] = useState(false);
@@ -14,12 +14,17 @@ const Gigs = () => {
   const [maxRef,setMaxRef]=useState(20000);
 
   const { search } = useLocation();
-  // console.log(location);
+  console.log(search);
+  console.log(new URLSearchParams(search).get('cat'))
+  const category=new URLSearchParams(search).get('cat');
 
+  // const { id } = useParams();
+  // console.log(id);
+ 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
     queryFn: () =>
-      newRequest.get(`gigs?${search}&min=${minRef}&max=${maxRef}&sort=${sort}`).then((res) => {
+      newRequest.get(`gigs?cat=${category}&min=${minRef}&max=${maxRef}&sort=${sort}`).then((res) => {
         return res.data;
       }),
   });

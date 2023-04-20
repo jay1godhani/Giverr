@@ -18,7 +18,7 @@ const Home = () => {
 
       <Slide slidesToShow={5} arrowsScroll={5}>
         {cards.map((card) => {
-          return <CatCard key={card.id} item={card} />;
+          return <CatCard key={card.id} item={card}  />;
         })}
       </Slide>
 
