@@ -82,8 +82,12 @@ const Add = () => {
             <select name="cat" id="cat" onChange={handleChange}>
               <option value="design">Design</option>
               <option value="web">Web Development</option>
-              <option value="animation">Animation</option>
-              <option value="music">Music</option>
+              <option value="translation">Translation</option>
+              <option value="logo">Logo Design</option>
+              <option value="dataentry">Data Entry</option>
+              <option value="wordpress">WordPress</option>
+              <option value="video">video Explainer</option>
+              
             </select>
             <div className="images">
               <div className="imagesInputs">

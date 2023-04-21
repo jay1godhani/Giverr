@@ -7,6 +7,7 @@ import newRequest from "../../../utils/newRequest";
 
 const Message = () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  console.log(currentUser)
   const { id } = useParams();
 
   const queryClient = useQueryClient();
@@ -38,7 +39,7 @@ const Message = () => {
     <div className="message">
       <div className="container">
         <span className="breadcrumbs">
-          <Link to="/messages">Messages</Link> JOHN DOE
+          <Link to="/messages">Messages:</Link> {currentUser.username} 
         </span>
         {isLoading ? (
           "loading"
